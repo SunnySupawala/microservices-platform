@@ -7,19 +7,18 @@ spring:
 
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
       routes:
         - id: user-service
           uri: lb://user-service
           predicates:
             - Path=/users/**
-      discovery:
-        locator:
-          enable: true
-          lower-case-service-id: true
+          filters:
+            - StripPrefix=1
 
-    inetutils:
-      preferred-networks:
-        - 127
 
 eureka:
   client:

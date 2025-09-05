@@ -1,0 +1,10 @@
+@localhost = http://localhost:8081
+
+
+GET http://127.0.0.1:8080/user-service/api/greet
+Content-Type: application/json
+
+###
+##
+GET {{localhost}}/api/greet
+Content-Type: application/json
