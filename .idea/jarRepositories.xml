@@ -7,6 +7,11 @@
       <option name="url" value="https://nexus.crifnet.com" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="clever-snapshot" />
       <option name="name" value="clever-snapshot" />
       <option name="url" value="https://nexus.crifnet.com/repository/CleverNext_Snapshot/" />
