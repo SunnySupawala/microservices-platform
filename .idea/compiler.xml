@@ -9,6 +9,7 @@
         <module name="api-gateway" />
         <module name="discovery-server" />
         <module name="user-service" />
+        <module name="oru-auth" />
       </profile>
     </annotationProcessing>
   </component>

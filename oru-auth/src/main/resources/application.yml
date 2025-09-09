@@ -1,0 +1,27 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: auth-service
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      default-zone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+    hostname: localhost
+    instance-id: ${spring.application.name}:${random.uuid}
+
+# Token properties (tweak as you like)
+app:
+  jwt:
+    issuer: "microservices-platform"
+    access-token-minutes: 60
+    private-key-path: keys/private.pem
+    public-key-path: keys/public.pem
+

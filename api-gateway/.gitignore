@@ -1,0 +1,29 @@
+# Ignore Maven and Gradle build directories
+target/
+build/
+
+# Ignore all target.* files (like target.log, target.tmp)
+target.*
+
+# IntelliJ IDEA
+*.iml
+.idea/
+*.iws
+*.ipr
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# VS Code
+.vscode/
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+
+# OS-specific
+.DS_Store
+Thumbs.db
