@@ -1,4 +1,4 @@
-package com.in.employee;
+package com.in.company;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,11 +10,11 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  */
 @SpringBootApplication
 @EnableFeignClients
-public class EmployeeApplication
+public class CompanyApplication
 {
     public static void main( String[] args )
     {
-        SpringApplication.run(EmployeeApplication.class, args);
+        SpringApplication.run(CompanyApplication.class, args);
         System.out.println( "Hello World!" );
     }
 }

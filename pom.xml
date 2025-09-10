@@ -57,5 +57,6 @@
     <module>user-service</module>
     <module>oru-auth</module>
     <module>employee-service</module>
+    <module>company-service</module>
   </modules>
 </project>
