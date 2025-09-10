@@ -10,6 +10,7 @@
         <module name="discovery-server" />
         <module name="user-service" />
         <module name="oru-auth" />
+        <module name="employee-service" />
       </profile>
     </annotationProcessing>
   </component>

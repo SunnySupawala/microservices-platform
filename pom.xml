@@ -56,5 +56,6 @@
     <module>api-gateway</module>
     <module>user-service</module>
     <module>oru-auth</module>
+    <module>employee-service</module>
   </modules>
 </project>

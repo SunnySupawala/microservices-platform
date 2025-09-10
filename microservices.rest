@@ -45,3 +45,9 @@ Content-Type: application/json
 ###
 GET http://localhost:8080/auth/keys/public
 Content-Type: application/json
+
+
+###
+GET http://localhost:8080/employee-service/api/health-check
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJtaWNyb3NlcnZpY2VzLXBsYXRmb3JtIiwic3ViIjoidXNlciIsImV4cCI6MTc1NzQ5MTQ1NiwiaWF0IjoxNzU3NDg3ODU2LCJyb2xlcyI6WyJST0xFX1VTRVIiXX0.SKJlB1NcSgdvkYEqJ8RkebnCn0XFp0IdU7FrD6803_m5stvzvMxpFOQQcXeVSrS5S5J57Ox26r03Tw_wljXUa5KdJ-oY4NQocuO3cyYcOytgfB3AT6BDpBJuOsVwA5uRGPj-X7BlG3wVy98PgVrbiT_pfjVwVnSjSiicMvz47WpMt5kDIP6qLM-IxH_mCZB6wcXIdtnRc-3ge_Btb8GMuAwU6aF43YJYlluMC2QQdiowqYPAP8sP_SyQD0Lq6JCpyaVhwT2DOrT0v4dDf8wc_IJDkWchha7EC-N22YP3T9i8T0g0aur-ZjsKDdPdsQoB6L5ClVJeMCymfOmdA9rZiw

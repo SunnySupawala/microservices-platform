@@ -22,6 +22,10 @@ spring:
             - Path=/users/**
           filters:
             - StripPrefix=1
+        - id: employee-service
+          uri: lb://employee-service
+          predicates:
+            - Path=/employee/**
 
 
 eureka:
