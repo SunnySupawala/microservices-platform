@@ -4,6 +4,14 @@ server:
 spring:
   application:
     name: user-service
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          # 2 options:
+          # Option A: Point directly to auth-service endpoint
+          #jwk-set-uri: http://localhost:8082/auth/.well-known/jwks.json
+          public-key-location: http://localhost:8080/auth/keys/public
 
 
 eureka:

@@ -43,8 +43,8 @@ public class AuthController {
     }
 
     // expose public key so resource-services can validate RS256 tokens
-    /*@GetMapping("/keys/public")
+    @GetMapping("/keys/public")
     public ResponseEntity<String> publicKey() {
-        return ResponseEntity.ok(jwtService.getPublicKeyPem());
-    }*/
+        return ResponseEntity.ok(jwtService.getPublicKey());
+    }
 }

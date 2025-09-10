@@ -3,6 +3,7 @@
 
 GET http://localhost:8080/users/api/greet
 Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJtaWNyb3NlcnZpY2VzLXBsYXRmb3JtIiwic3ViIjoidXNlciIsImV4cCI6MTc1NzQxMjYzNywiaWF0IjoxNzU3NDA5MDM3LCJyb2xlcyI6WyJST0xFX1VTRVIiXX0.k5pbhzbAjzwXneWHpiWhYhN0ASfmDAUw19Uh8jthpv5o5jb0jHloIEjJEo8-WGJw4zdANoGJcnPk68tvJlsiz34ohJMexaE3k0cakeDh422jtYiZlvRNlJfk7dpZo2JorNOSzQoYEhyrd2S9J-KaDJMxwWQiPn5fSbJxsMVCXZEAdumesPWHcNDjEBJTzlWoQSLsC_OFHC074tCWRTQAfXuMmlLc0mA9SARdqvvYA9T-Rl0KsrI3UEpfhFh5ZQrRlbEUJW8WJiZywFd9YMXKv3IJxTtDeMFx5NdzF2rGN6R-h_K1v6QmiftAhXzDaQjkhsY1hY7nsmqHUSlPGPJnlw
 
 ###
 ##
@@ -40,3 +41,7 @@ Content-Type: application/json
     "username" : "user",
     "password" : "password"
 }
+
+###
+GET http://localhost:8080/auth/keys/public
+Content-Type: application/json

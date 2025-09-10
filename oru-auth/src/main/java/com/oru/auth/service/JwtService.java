@@ -17,6 +17,7 @@ import java.security.PrivateKey;
 import java.security.PublicKey;
 import java.security.spec.PKCS8EncodedKeySpec;
 import java.time.Instant;
+import java.util.Base64;
 import java.util.Date;
 import java.util.List;
 
@@ -34,30 +35,12 @@ public class JwtService {
     public JwtService(){
         try{
             //load private key
-
             ClassPathResource privateResource = new ClassPathResource("private.pem");
             ClassPathResource publicResource = new ClassPathResource("public.pem");
 
             this.privateKey = PemUtils.readPrivateKey(privateResource.getInputStream(), "RSA");
             this.publicKey = PemUtils.readPublicKey(publicResource.getInputStream(), "RSA");
 
-
-            /*try(InputStream is = getClass().getResourceAsStream("/keys/private.pem")){
-                if(is == null) throw new IllegalStateException("Private key not found");
-                String pem = new String(is.readAllBytes(), StandardCharsets.UTF_8)
-                        .replace("-----BEGIN PRIVATE KEY-----", "")
-                        .replace("-----END PRIVATE KEY-----", "")
-                        .replaceAll("\\s", "");
-                byte[] pkcs8 =  java.util.Base64.getDecoder().decode(pem);
-                KeyFactory kf = KeyFactory.getInstance("RSA");
-                privateKey = kf.generatePrivate(new PKCS8EncodedKeySpec(pkcs8));
-            }*/
-
-            // Load public key (exposed for resource services)
-            /*try (InputStream is = getClass().getResourceAsStream("/keys/public.pem")) {
-                if (is == null) throw new IllegalStateException("Public key not found");
-                publicKeyPem = new String(is.readAllBytes(), StandardCharsets.UTF_8);
-            }*/
         }catch (Exception ex){
             throw new RuntimeException("Failed to load keys", ex);
         }
@@ -91,5 +74,17 @@ public class JwtService {
             throw new RuntimeException("Failed to sign JWT", jsonEOFException);
         }
 
+    }
+
+    public String getPublicKey() {
+
+        try {
+            return "-----BEGIN PUBLIC KEY-----\n" +
+                    Base64.getMimeEncoder(64, new byte[]{'\n'})
+                            .encodeToString(publicKey.getEncoded()) +
+                    "\n-----END PUBLIC KEY-----";
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to export public key", e);
+        }
     }
 }
